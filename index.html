@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Demo comparison between indexedDB API and Idb library">
+  <meta name="keywords" content="IndexedDB API, IDB, IndexedDB with Promise, Javascript, Material Design Lite">
+  <meta name="author" content="Ann G. Adebugslife">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <title>IndexedDB With Promises CRUD Demo</title>
+  <link rel="stylesheet" href="./utilities/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <div class="mdl-layout__header mdl-layout__header-row">
+        <h1 class="mdl-layout-title">IndexedDB With Promises CRUD Demo</h1>
+        <div class="mdl-layout-spacer"></div>
+
+      </div>
+    </header>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="demo-drawer-header">
+        <a href="http://adebugslife.com"><img src="http://adebugslife.com/sites/default/files/adebugslifelogo_03_0.png" class="demo-avatar"></a>
+        <div class="demo-avatar-dropdown">
+          <span>Hello Coders!</span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link" href="https://adebugslife.github.io">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+        <a class="mdl-navigation__link" href="https://adebugslife.github.io/indexeddb-crud-demo">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>IndexedDB API</a>
+        <a class="mdl-navigation__link" href="https://adebugslife.github.io/idb-promise-demo">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>IDB library</a>
+        <a class="mdl-navigation__link" href="/">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Credits</a>
+      </nav>
+    </div>
+    <div class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-grid demo-content">
+        <div id="stock-form" class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+          <form id="calcForm" name="calcForm" method="post">
+            <input type="hidden" id="id" name="id">
+            <div id="grade-wrapper" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input type="text" id="name" class="mdl-textfield__input" name="name" value="" list="name" />
+              <label class="mdl-textfield__label" for="name">Name</label>
+              <span class="mdl-textfield__error">Input Name!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input type="text" id="subject" class="mdl-textfield__input" name="subject" />
+              <label class="mdl-textfield__label" for="subject">Subject</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input type="number" id="score" class="mdl-textfield__input" step=".01" name="score" pattern="-?[0-9]*(\.[0-9]+)?"
+              />
+              <label class="mdl-textfield__label" for="score">Score</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <input id="post-button" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"/>
+          </form>
+
+        </div>
+        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+          <a id="clearAll" href="">Clear All</a>
+          <div class="mdl-grid demo-content">
+            <table id="result" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+    <script src="./utilities/material.min.js"></script>
+    <script type="text/javascript" src="utilities/idb.js"></script>
+    <script type="text/javascript" src="js/idbcustom.js"></script>
+    <script type="text/javascript" src="js/computation.js"></script>
+</body>
+
+</html>

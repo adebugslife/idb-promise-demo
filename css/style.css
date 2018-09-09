@@ -1,0 +1,15 @@
+.mdl-layout__header-row {
+  background-color: #3A3D3E;
+}
+.demo-drawer-header {
+  padding: 10px;
+  text-align: center;
+}
+.mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+  color: #fff;
+  background-color: #F5DB02;
+}
+#clearAll {
+  float: right;
+  padding: 10px;
+}
