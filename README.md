@@ -1,14 +1,14 @@
 # IndexedDB API
 
 ## Demo
-* [IndexedDB with Promise library in CRUD demo](https://adebugslife.github.io/idb-promise-demo/)
+* [IndexedDB with Promise library in CRUD demo](https://simplifyjs.github.io/idb-promise-demo/)
 
 ## Coverage
-1. [Create Database and Table](https://github.com/adebugslife/idb-promise-demo#create-database-and-table)
-1. [Create](https://github.com/adebugslife/idb-promise-demo#create)
-2. [Read](https://github.com/adebugslife/idb-promise-demo#read)
-3. [Update](https://github.com/adebugslife/idb-promise-demo#update)
-4. [Delete](https://github.com/adebugslife/idb-promise-demo#delete)
+1. [Create Database and Table](https://github.com/simplifyjs/idb-promise-demo#create-database-and-table)
+1. [Create](https://github.com/simplifyjs/idb-promise-demo#create)
+2. [Read](https://github.com/simplifyjs/idb-promise-demo#read)
+3. [Update](https://github.com/simplifyjs/idb-promise-demo#update)
+4. [Delete](https://github.com/simplifyjs/idb-promise-demo#delete)
 
 ## Create Database and Table
 ```html
@@ -133,8 +133,8 @@ function clearAllFx() {
 ```
 
 ## Author
-* **Ann G.** ⊂(・﹏・⊂) [Adebugslife](http://adebugslife.com)
+* **Ann G.** ⊂(・﹏・⊂) [Simplify JS](http://simplifyjs.com)
 
 
 
-**Free Reference, Hell Yeah! (￣▽￣)ゞ**
+**Free Reference, oh Yeah! (￣▽￣)ゞ**
